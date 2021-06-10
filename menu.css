@@ -34,7 +34,7 @@ main{
 main  :first-child{
     grid-column: span 4;
 }
-img{
+#pizza{
     height: 250px;
     border-style: solid;
     object-fit: fill;
@@ -73,6 +73,9 @@ h2{
     h2{
         color: lawngreen;
     }
+    footer{
+        background-color: palegoldenrod;
+    }
 }
 /* desktop media query */
 @media only screen and (min-width:1100px){
@@ -82,8 +85,7 @@ h2{
     footer{
         bottom: 10vh;
     }
-    #pizzalogo{
+    .pizzalogo{
         height: 300px;
     }
-    
 }
