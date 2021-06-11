@@ -1,91 +1,108 @@
 /* global rules, always apply */
-html{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:  rgb(124, 180, 102);
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #7cb466;
 }
 
-nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: rgb(236, 126, 148);
-    line-height: 7vh;
-    text-align: center;
+nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #ec7e94;
+  line-height: 7vh;
+  text-align: center;
 }
-a{
-    text-decoration: none;
-    font-size: 1.5rem;
+
+nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
 }
+
 /* override rules(mobile) */
-main{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    justify-items: center;
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
 }
 
-#menuheading{
-    grid-column: 5fr;
-    font-size: 300%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    text-shadow: 2px 2px 5px red;
-    line-height: 2vh;
-    width: 10vw;
-}
-main  :first-child{
-    grid-column: span 4;
-}
-#pizza{
-    height: 250px;
-    border-style: solid;
-    object-fit: fill;
-
-    
-}
-footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    bottom: 6vh;
-    width: 100vw;
-    align-items: center;
-    justify-items: center;
-    background-color: floralwhite;
+main h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 5px red;
 }
 
-h2{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    text-shadow: 2px 2px 5px red; 
+main .type {
+  position: relative;
+  list-style: none;
+  font-size: 1.5rem;
 }
-.type{
-    position: relative;
-    list-style: none;
-    font-size: 1.5rem;
 
+#menuheading {
+  -ms-grid-column: 5;
+  grid-column: 5fr;
+  font-size: 300%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 5px red;
+  line-height: 2vh;
+  width: 10vw;
 }
-.pizzalogo{
-    height: 100px;
+
+main :first-child {
+  grid-column: span 4;
 }
+
+#pizza {
+  height: 250px;
+  border-style: solid;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  bottom: 6vh;
+  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  background-color: floralwhite;
+}
+
+.pizzalogo {
+  height: 100px;
+}
+
 /* Tablet media query */
-@media only screen and (min-width:600px){
-    .pizzalogo{
-        height: 200px;
-    }
-    h2{
-        color: lawngreen;
-    }
-    footer{
-        background-color: palegoldenrod;
-    }
+@media only screen and (min-width: 600px) {
+  .pizzalogo {
+    height: 200px;
+  }
+  h2 {
+    color: lawngreen;
+  }
+  footer {
+    background-color: palegoldenrod;
+  }
 }
+
 /* desktop media query */
-@media only screen and (min-width:1100px){
-    .type{
-        font-size: 3rem;
-    }
-    footer{
-        bottom: 10vh;
-    }
-    .pizzalogo{
-        height: 300px;
-    }
+@media only screen and (min-width: 1100px) {
+  .type {
+    font-size: 3rem;
+  }
+  footer {
+    bottom: 10vh;
+  }
+  .pizzalogo {
+    height: 300px;
+  }
 }
+/*# sourceMappingURL=menu.css.map */
